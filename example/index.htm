@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<title>Splitting - By Line</title>
+<link rel="stylesheet" href="./style/splitting.css">
+
+<style>
+.textarea {
+    width: 450px;
+    margin: 150px auto;
+    font-size: 28px;
+}
+.char.ready {
+    transform: translateY(-50px);
+    transition-delay: calc(calc(var(--linechar-index) * 0.02s) + calc(var(--line-index) * 0.04s));
+}
+
+.char.ready {
+    transition-duration: 0.6s;
+}
+</style>
+</head>
+<body>
+    <div class="textarea">
+        <p class="textline" data-splitting>With all this text, the end of each line comes up last. It uses the linechar-index attribute to achieve this. Some simple CSS helps accomplish this. Splitting.js adds some CSS variables and Splitting-by-line adds some more CSS varaibles to make the animation easy. </p>
+    </div>
+
+</body>
+
+<script src="./scripts/splitting.js"></script>
+<script>
+    var s = Splitting({
+        target: "[data-splitting]",
+        by: 'lines'
+    }).forEach(s => {
+        Splitting({
+            target: s.words,
+            by: 'chars',
+            force: true
+        })
+    });
+</script>
+<!-- <script>alert("here")</script> -->
+<script src="./scripts/splitting-by-line.js"></script>
+<script>
+    setTimeout(() =>{
+        splittingByLine()
+    },1000)
+</script>
+</html>
