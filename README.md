@@ -1,5 +1,4 @@
-
-#Splitting.js By Line
+# Splitting.js By Line
 
 This is a little add-on for the Splitting.js text library so you can do animations by line and characters.
 
@@ -32,7 +31,7 @@ Add the script to your HTML:
 ```
 
 
-To trigger the animation call the splittingByLine() function. You could do things such as a button event or timeout to create a delay when the page loads:
+To trigger the animation call the splittingByLine() function. Call this function in things like a button event or timeout to create a delay when the page loads:
 ```
 <script>
     setTimeout(() =>{
@@ -42,7 +41,7 @@ To trigger the animation call the splittingByLine() function. You could do thing
 ```
 
 
-#References
+### References
 https://github.com/shshaw/Splitting
 https://splitting.js.org/guide.html#get-started
 
