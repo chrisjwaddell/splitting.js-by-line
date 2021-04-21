@@ -1,7 +1,7 @@
 # Splitting.js By Line
-This is a little add-on for the Splitting.js text library so you can do animations by line and characters together.
+This is a little add-on for the Splitting.js text library so you can do animations by line and character together.
 
-It adds CSS variables *--linechar-index* and *--line-index* to each character. This allows you to do slightly different animations depending on the line and character position. 
+It adds CSS variables *--linechar-index* and *--line-index* to each character. This allows you to do slightly different animations depending on the line and character position.
 If a character is 50th in the string, it may be 8th on the second line.
 By changing the *transition-delay* in CSS, you can do things like this:
 ```
@@ -10,7 +10,8 @@ transition-delay: calc(calc(var(--linechar-index) * 0.02s) + calc(var(--line-ind
 
 
 The Splitting.js code needs to split by line, then character:
-```var s = Splitting({
+```
+var s = Splitting({
 	target: "[data-splitting]",
         by: 'lines'
 }).forEach(s => {
