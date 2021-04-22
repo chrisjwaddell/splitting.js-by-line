@@ -8,18 +8,25 @@
 <link rel="stylesheet" href="./style/splitting.css">
 
 <style>
+body {
+    background-color: #000000;
+}
+
 .textarea {
-    width: 450px;
-    margin: 150px auto;
-    font-size: 28px;
+    width: 550px;
+    margin: 450px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 200;
+    color: #ffffff;
 }
 .char.ready {
-    transform: translateY(-50px);
-    transition-delay: calc(calc(var(--linechar-index) * 0.02s) + calc(var(--line-index) * 0.04s));
+    transform: translateY(-125px);
+    transition-delay: calc(calc(var(--linechar-index) * 0.01s) + calc(var(--line-index) * 0.005s));
 }
 
 .char.ready {
-    transition-duration: 0.6s;
+    transition-duration: 1.8s;
 }
 </style>
 </head>
