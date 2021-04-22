@@ -45,7 +45,7 @@ To trigger the animation call the splittingByLine() function. Call this function
 
 
 ### References
-[Splitting.js on Github](https://github.com/shshaw/Splitting)
+[Splitting.js on Github](https://github.com/shshaw/Splitting)\
 [Splitting.js homepage](https://splitting.js.org/guide.html)
 
 
