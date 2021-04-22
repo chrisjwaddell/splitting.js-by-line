@@ -26,7 +26,7 @@ var s = Splitting({
 ```
 
 
-Add the script to your HTML:
+Add the script to your HTML after splitting.js:
 ```
 <script src="./scripts/splitting-by-line.js"></script>
 ```
