@@ -12,7 +12,7 @@ elAllSplitting.forEach((txt) => {
   // debugger
   line = 0
   linechar = 0
-  elWords = txt.querySelectorAll('.word')
+  elWords = txt.querySelectorAll('.word.words')
   console.log(elWords)
   // debugger
   for (let w = 0; w < elWords.length; w++) {
