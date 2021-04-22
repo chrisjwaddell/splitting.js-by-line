@@ -15,12 +15,11 @@ The Splitting.js code needs to split by line, then character:
 ```
 var s = Splitting({
 	target: "[data-splitting]",
-        by: 'lines'
+    by: 'lines'
 }).forEach(s => {
 	Splitting({
-        	target: s.char,
-            	by: 'chars',
-            	force: true
+        	target: s.words,
+            by: 'chars'
 	})
 });
 ```
