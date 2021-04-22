@@ -18,7 +18,7 @@ var s = Splitting({
         by: 'lines'
 }).forEach(s => {
 	Splitting({
-        	target: s.words,
+        	target: s.char,
             	by: 'chars',
             	force: true
 	})
