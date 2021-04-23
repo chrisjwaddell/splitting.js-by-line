@@ -26,7 +26,7 @@ elAllSplitting.forEach((txt) => {
     for (let c = 0; c < elChars.length; c++) {
       elChars[c].style.setProperty("--linechar-index", linechar)
       elChars[c].style.setProperty("--line-index", line)
-      elChars[c].classList.add("ready")
+      elChars[c].classList.add("sbl")
       linechar++
     }
   }

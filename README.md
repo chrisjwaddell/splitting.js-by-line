@@ -10,6 +10,15 @@ By changing the *transition-delay* in CSS, you can do things like this:
 transition-delay: calc(calc(var(--linechar-index) * 0.01s) + calc(var(--line-index) * 0.005s));
 ```
 
+Add in a class
+```
+.char.sbl {
+    transform: translateY(-225px);
+    transition-delay: calc(calc(var(--linechar-index) * 0.01s) + calc(var(--line-index) * 0.008s));
+    transition-duration: 1.8s;
+}
+```
+
 
 The Splitting.js code needs to split by line, then character:
 ```
