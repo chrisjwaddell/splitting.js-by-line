@@ -40,7 +40,7 @@ Add the script to your HTML after splitting.js:
 ```
 
 
-To trigger the animation call the splittingByLine() function. Call this function in things like a button event or timeout to create a delay when the page loads:
+To trigger the animation call the *splittingByLine()* function. Call this function in things like a button event or timeout to create a delay when the page loads:
 ```
 <script>
     setTimeout(() =>{
