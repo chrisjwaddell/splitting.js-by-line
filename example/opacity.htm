@@ -12,24 +12,35 @@ body {
     background-color: #000000;
 }
 
+.char {
+    opacity: 0;
+    transition-duration: 4s;
+    transition-property: opacity;
+}
+
+.sbl1 .char {
+    opacity: calc(((var(--linechar-total) - var(--linechar-index) - 5) / var(--linechar-total)) * 1);
+    opacity: calc(((var(--linechar-max) - var(--linechar-index) - 5) / var(--linechar-max)) * 1);
+}
+
+.sbl2 .char {
+    opacity: 1;
+}
+
 .textarea {
-    width: 550px;
-    margin: 450px auto;
+    width: 600px;
+    margin: 150px auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 26px;
     font-weight: 200;
     color: #ffffff;
 }
-.char.sbl {
-    transform: translateY(-225px);
-    transition-delay: calc(calc(var(--linechar-index) * 0.01s) + calc(var(--line-index) * 0.008s));
-    transition-duration: 1.2s;
-}
+
 </style>
 </head>
 <body>
     <div class="textarea">
-        <p class="textline" data-splitting>With all this text, the end of each line comes up last. It uses the linechar-index attribute to achieve this. Some simple CSS helps accomplish this. Splitting.js adds some CSS variables and Splitting-by-line adds some more CSS variables to make the animation easy. </p>
+        <p class="textline" data-splitting>This example uses CSS variables --linechar-total and --linechar-index to change opacity of each character. Splitting.js adds some CSS variables and Splitting-by-line adds some more CSS variables to make the animation easy.</p>
     </div>
 
 </body>
@@ -38,7 +49,8 @@ body {
 <script>
     var s = Splitting({
         target: "[data-splitting]",
-        by: 'lines'
+        by: 'lines',
+	whitespace: true
     }).forEach(s => {
         Splitting({
             target: s.words,
@@ -51,6 +63,7 @@ body {
 <script>
     setTimeout(() =>{
         splittingByLine()
-    },1000)
+    },2000)
+console.time()
 </script>
 </html>
