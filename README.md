@@ -21,7 +21,7 @@ Add in a class
 ```
 
 
-This example uses the *--linechar-max* variable to change opacity by the same amount on each line for each character position on the line.
+This example uses the *--linechar-max* variable to change opacity by the same amount depending on the character position for each line.
 ![Splitting by line](https://github.com/chrisjwaddell/splitting.js-by-line/blob/main/splitting.js-by-line-max.gif)
 
 
