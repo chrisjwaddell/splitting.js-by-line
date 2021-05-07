@@ -1,10 +1,11 @@
 # Splitting.js By Line
 This is a little add-on for the Splitting.js text micro-library so you can do animations by line and character together.
 
-![Splitting by line](https://github.com/chrisjwaddell/splitting.js-by-line/blob/main/splitting.js-by-line.gif)
-
 Splitting.js-by-line adds CSS variables *--linechar-index* and *--line-index* to each character. This allows you to do slightly different animations depending on the line and character position.
 If a character is 50th in the string, it may be 8th on the second line.
+
+![Splitting by line](https://github.com/chrisjwaddell/splitting.js-by-line/blob/main/splitting.js-by-line.gif)
+
 By changing the *transition-delay* in CSS, you can do things like this:
 ```
 transition-delay: calc(calc(var(--linechar-index) * 0.01s) + calc(var(--line-index) * 0.005s));
@@ -18,6 +19,11 @@ Add in a class
     transition-duration: 1.8s;
 }
 ```
+
+
+This example uses the *--linechar-max* variable to change opacity by the same amount on each line for each character position on the line.
+![Splitting by line](https://github.com/chrisjwaddell/splitting.js-by-line/blob/main/splitting.js-by-line-max.gif)
+
 
 
 The Splitting.js code needs to split by line, then character:
