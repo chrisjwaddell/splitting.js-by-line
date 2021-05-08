@@ -28,7 +28,6 @@ function appendChild(el, child) {
 }
 
 function createElement(parent, key, text, whitespace) {
-    console.log("whitespace - " + whitespace)
   var el = root.createElement('span');
   key && (el.className = key);
   if (text) {
@@ -224,7 +223,6 @@ function splitText(el, key, splitOn, includePrevious, preserveWhitespace) {
             }
             // Concatenate the split text children back into the full array
             each(contents.split(splitOn), function(splitText, i) {
-                console.log("preserveWhitespace - " + preserveWhitespace)
                 if (i && preserveWhitespace) {
                     allElements.push(createElement(F, "whitespace", " ", preserveWhitespace));
                 }

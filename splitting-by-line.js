@@ -41,13 +41,9 @@ elAllSplitting.forEach((txt) => {
   txt.style.setProperty("--linechar-max", linecharmax)
 })
 
-let t0 = performance.now();
-
 elAllSplitting.forEach((txt) => {
     txt.classList.add("sbl1");
 })
-
-let t1 = performance.now();
 
 setTimeout(() => {
     elAllSplitting.forEach((txt) => {
