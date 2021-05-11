@@ -25,15 +25,14 @@ This example uses the *--linechar-max* variable to change opacity by the same am
 ![Splitting by line](https://github.com/chrisjwaddell/splitting.js-by-line/blob/main/splitting.js-by-line-max.gif)
 
 
-Splitting.js By Line adds three new CSS variables:
---linechar-index - Character position of the character on the line.
---linechar-total  - Total characters of the current line
---linechar-max - The maximum --linechar-total in all the lines.
+Splitting.js By Line adds three new CSS variables:\
+--linechar-index - Character position of the character on the line.\
+--linechar-total  - Total characters of the current line.\
+--linechar-max - The maximum --linechar-total in all the lines.\
 
-Two classes are uses to help in animation.
-sbl1 - This is added when DOM text elements have been added by Splitting.js By Line. This is the state you want your animation to start from. Your CSS animation can start with *.sbl1* in the classname.
-sbl2 - When animation is complete. The state when the animation is complete.
-
+Two classes are uses to help in animation.\
+sbl1 - This is added when DOM text elements have been added by Splitting.js By Line. This is the state you want your animation to start from. Your CSS animation can start with *.sbl1* in the classname.\
+sbl2 - When animation is complete. The state when the animation is complete.\
 
 
 The Splitting.js code needs to split by line, then character:
