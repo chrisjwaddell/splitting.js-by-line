@@ -20,11 +20,11 @@
         }
 
         .sbl1 .char {
-            transition-delay: calc(calc(((var(--linechar-index)) / var(--linechar-max)) * 1) * 1.5s);
+            transition-delay: calc(calc(((var(--linechar-index)) / var(--linechar-max)) * 1) * 2.0s);
         }
 
         .sbl2 .char {
-            transition-duration: 10s;
+            transition-duration: 7s;
             opacity: 1;
         }
 
@@ -65,7 +65,7 @@
 <script>
     setTimeout(() => {
         splittingByLine()
-    }, 3000)
+    }, 1000)
     console.time()
 </script>
 

@@ -20,7 +20,11 @@ function splittingByLine() {
             if (line !== Number(elWords[w].style.getPropertyValue("--line-index"))) {
                 line++
                 linechar = 0
+            } else {
+                // count the space between words
+                linechar += 1
             }
+
             if (!linechar) {
                 linechartotal = document.querySelectorAll(`.word.words[style*="--line-index:${line}"] .char`).length
             }
