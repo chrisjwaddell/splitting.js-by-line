@@ -39,7 +39,7 @@ eg
 ```
 /* Start of animation */
 .sbl1 .char {
-    opacity: calc(((var(--linechar-max) - var(--linechar-index) - 5) / var(--linechar-max)) * 1);
+    transition-delay: calc(calc(((var(--linechar-index)) / var(--linechar-max)) * 1) * 1.5s);
 }
 
 /* End of animation */
