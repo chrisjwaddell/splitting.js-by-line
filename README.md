@@ -28,7 +28,7 @@ This example uses the *--linechar-max* variable to change opacity by the same am
 Splitting.js By Line adds three new CSS variables:\
 *--linechar-index* - Character position of the character on the line.\
 *--linechar-total*  - Total characters of the current line.\
-*--linechar-max* - The maximum --linechar-total in all the lines.
+*--linechar-max* - The maximum number of characters in the largest line.
 
 Three classes are uses to help in animation.\
 *sbl* - This class is added as the CSS variables get added to each character.\
