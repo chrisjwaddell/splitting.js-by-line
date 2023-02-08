@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <title>Splitting - By Line</title>
+    <link rel="stylesheet" href="./style/splitting.css">
+
+    <style>
+        body {
+            background-color: #000000;
+        }
+
+        .textarea {
+            width: 550px;
+            margin: 450px auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 26px;
+            font-weight: 200;
+            color: #ffffff;
+        }
+
+        .char.sbl {
+            /* transform: translateY(-225px);            */
+            /* transition-delay: calc(calc(((var(--linechar-index)) / var(--linechar-max)) * 1) * 0.65s);
+            transition-duration: 1.2s; */
+
+            /* transition-delay: calc(calc(var(--linechar-index) * 0.01s) + calc(var(--line-index) * 0.008s)); */
+
+            -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            animation-delay: calc(calc(((var(--linechar-index)) / var(--linechar-max)) * 1) * 1.65s);
+
+            -webkit-animation-name: bounce;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-70px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="textarea">
+        <p class="textline" data-splitting>With all this text, the end of each line comes up last. It uses the
+            linechar-index attribute to achieve this. Some simple CSS helps accomplish this. Splitting.js adds some CSS
+            variables and Splitting-by-line adds some more CSS variables to make the animation easy. </p>
+    </div>
+
+</body>
+
+<script src="./scripts/splitting.js"></script>
+<script>
+    var s = Splitting({
+        target: "[data-splitting]",
+        by: 'lines',
+    }).forEach(s => {
+        Splitting({
+            target: s.words,
+            by: 'chars',
+        })
+    });
+</script>
+<!-- <script>alert("here")</script> -->
+<script src="./scripts/splitting-by-line.js"></script>
+<script>
+    setTimeout(() => {
+        splittingByLine()
+    }, 1000)
+</script>
+
+</html>
