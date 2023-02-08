@@ -23,18 +23,11 @@
         }
 
         .char.sbl {
-            /* transform: translateY(-225px);            */
-            /* transition-delay: calc(calc(((var(--linechar-index)) / var(--linechar-max)) * 1) * 0.65s);
-            transition-duration: 1.2s; */
-
-            /* transition-delay: calc(calc(var(--linechar-index) * 0.01s) + calc(var(--line-index) * 0.008s)); */
-
             -webkit-animation-duration: 2.5s;
             animation-duration: 2.5s;
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
             animation-delay: calc(calc(((var(--linechar-index)) / var(--linechar-max)) * 1) * 1.65s);
-
             -webkit-animation-name: bounce;
             animation-name: bounce;
             animation-iteration-count: infinite;
